@@ -2,6 +2,7 @@ use clap::{Parser, Subcommand};
 
 #[derive(Parser)]
 #[command(name = "weakpm")]
+#[command(version = "0.1.0")]
 #[command(about = "A simple package manager for non-root users 🥴", long_about = None)]
 pub struct Cli {
     #[command(subcommand)]
@@ -16,6 +17,6 @@ pub enum Commands {
 
 #[derive(clap::Args)]
 pub struct SearchArgs {
-    /// Github repo (e.g. neovim/neovim)
+    /// Github repo (e.g. junegunn/fzf)
     pub repo: String,
 }
